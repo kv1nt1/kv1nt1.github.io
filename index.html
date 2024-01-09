@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="rectangle1">
+        <div class="info">
+            <div class="phone"></div>
+            <div class="number">8 800 555 35 35</div>
+            <div class="letter"></div>
+            <div class="mail">botanparadise@pochta.com</div>
+            <div class="social"></div>
+        </div>
+    </div>
+    <div class="logo"></div>
+    <nav class="navmenu">
+        <ul>
+            <li><a href="#" class="navmenu-link">О НАС</a></li>
+            <li><a href="Untitled-2.html" class="navmenu-link">КАТАЛОГ</a></li>
+            <li><a href="Untitled-3.html" style="margin-right: -75px;" class="navmenu-link">СВЯЗЬ С НАМИ</a></li>
+        </ul>
+    </nav>
+    <div class="rectangle2"></div>
+    <div class="interaction">
+        <div class="stand">САДОВЫЙ ПИТОМНИК</div>
+        <div class="lower">и услуги по уходу <br/> за растениями</div>
+        <button onclick="redirectToAnotherPage()" class="pristup">ПРИСТУПИТЬ</button>
+    </div>
+    <div class="info1">
+        <div class="name">О БОТАНИЧЕСКОМ РАЕ</div>
+        <div class="quest">Кто мы такие?</div>
+        <div class="lower2">У нас вы найдете богатство разнообразных растений,<br/> профессиональные советы и заботливый сервис. Преобразите свой сад <br/>с нами</div>
+        <button onclick="window.location.href='Untitled-3.html';" class="svaz">СВЯЗЬ С НАМИ</button>
+        </div>
+    <div class="rectangle3"></div>
+    <div class="container">
+        <div class="images">
+            <img src="imgs/1.jpg">
+            <img src="imgs/2.jpg">
+            <img src="imgs/3.jpg">
+            <img src="imgs/4.jpg">
+            <img src="imgs/5.jpg">
+            <img src="imgs/6.jpg">
+            <img src="imgs/7.jpg">
+        </div>
+    
+    </div>
+    </div>
+
+    <script>
+        var indexValue = 0;
+        function SlideShow(){
+            setTimeout(SlideShow, 5500);
+            var x;
+            const img = document.querySelectorAll("img");
+            for(x = 0; x < img.length; x++){
+                img[x].style.display = "none";
+            }
+        indexValue++;
+        if(indexValue > img.length){indexValue = 1}
+        img[indexValue - 1].style.display = "block";
+        }
+        SlideShow();
+        function redirectToAnotherPage() {
+            window.location.href = "Untitled-2.html";
+        }
+    </script>
+</body>
+</html>
